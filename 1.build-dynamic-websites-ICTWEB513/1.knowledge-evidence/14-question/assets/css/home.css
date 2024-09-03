@@ -1,0 +1,77 @@
+.highlight {
+  margin-top: 40px;
+}
+
+.episode-card {
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-color); /* Cor principal para o fundo */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajustando a sombra */
+}
+
+.episode-card img {
+  max-width: 150px;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+
+.episode-details {
+  flex: 1;
+  color: var(--secondary-color);
+}
+
+.episode-details h3 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: var(--secondary-color);
+}
+
+.episode-details p {
+  margin-bottom: 15px;
+  color: var(--secondary-color);
+}
+
+.episode-details a {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: var(--contrast-color);
+  color: var(--secondary-color);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.episode-details a:hover {
+  background-color: var(--primary-color);
+  border: 1px solid var(--contrast-color);
+}
+
+.curiosities {
+  margin-top: 40px;
+}
+
+.curiosities h2 {
+  margin-bottom: 20px;
+}
+
+.curiosities ul {
+  list-style-type: none;
+}
+
+.curiosities li {
+  margin-bottom: 10px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.image-grid img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}

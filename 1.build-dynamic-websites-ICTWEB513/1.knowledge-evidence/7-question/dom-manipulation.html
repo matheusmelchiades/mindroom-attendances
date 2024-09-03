@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="author" content="Matheus Maciel Melchiades" />
+    <title>DOM MANIPULATION</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        cursor: default;
+      }
+
+      body {
+        width: 100vw;
+        height: 100vh;
+      }
+
+      header {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        font-size: 24px;
+        color: black;
+      }
+
+      #box {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        display: inline-block;
+        position: absolute;
+      }
+
+      #box:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body onclick="onClickBody(event)">
+    <header class="header">
+      <h1>DOM Manipulation</h1>
+      <p>Click on the screen to create a box.</p>
+      <p>Click on a box to change its color.</p>
+      <p>Double click on a box to remove it.</p>
+    </header>
+
+    <script>
+      const BOX_ID = "box";
+      const BOX_SIZE = 150;
+      const BOX_SIZE_MAX = 300;
+      const BOX_SIZE_MIN = 50;
+      const COLORS = [
+        "red",
+        "green",
+        "yellow",
+        "orange",
+        "purple",
+        "blue",
+        "black",
+        "gray",
+      ];
+      const ELEMENT_IGNORE = ["header"];
+
+      function randomDimension() {
+        return {
+          width: Math.floor(Math.random() * BOX_SIZE_MAX) + BOX_SIZE_MIN,
+          height: Math.floor(Math.random() * BOX_SIZE_MAX) + BOX_SIZE_MIN,
+        };
+      }
+
+      function randomPosition() {
+        return {
+          x: Math.floor(Math.random() * window.innerWidth),
+          y: Math.floor(Math.random() * window.innerHeight),
+        };
+      }
+
+      function randomColor() {
+        return COLORS[Math.floor(Math.random() * COLORS.length)];
+      }
+
+      function createBox(size, position, color) {
+        const newBox = document.createElement("div");
+
+        newBox.id = BOX_ID;
+
+        newBox.style.width = size.width + "px";
+        newBox.style.height = size.height + "px";
+
+        newBox.style.left = position.x + "px";
+        newBox.style.top = position.y + "px";
+
+        newBox.style.backgroundColor = color;
+
+        return newBox;
+      }
+
+      function changeBox(box, color) {
+        box.style.backgroundColor = color;
+      }
+
+      function onClickBody(event, color, position) {
+        const isBody = event.target.tagName === "BODY";
+        const doubleClick = event.detail === 2;
+
+        if (ELEMENT_IGNORE.includes(event.target.offsetParent?.localName))
+          return;
+
+        if (isBody) {
+          const size = randomDimension();
+          const position = randomPosition();
+          const color = randomColor();
+
+          const newBox = createBox(size, position, color);
+
+          document.body.appendChild(newBox);
+        } else {
+          if (doubleClick && event.target.id === BOX_ID) {
+            event.target.remove();
+          } else {
+            changeBox(event.target, randomColor());
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

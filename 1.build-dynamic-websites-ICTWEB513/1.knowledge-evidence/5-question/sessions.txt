@@ -1,0 +1,3 @@
+sessions in PHP are a tool really useful to store any variable across mutiples contexts like pages.
+to be more techniques to be security it's not like "localstorage" that saved in user client and yes on the server to keep
+the sync and security.

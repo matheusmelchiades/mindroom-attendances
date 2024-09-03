@@ -1,0 +1,12 @@
+So Basic is called as 7 layers 
+
+A. Application layer is responsible to send the http request to the server from the browser.
+B. Presentation layer is responsible to format or encrypted, if necessary, for transmission.
+C. Session Layer create a connection between web client and server managing the communication.
+D. Transport Layer resuming the HTTP splitting in any segments the content of request following the protocols on the web to get a success devlivery.
+E. Network Layer is related to transport layer, but the difference is that is the manager of all transports layers using TCP segment that once encapsulated into IP packets.
+F. Data Link layer is responsible to encapsulated into frames, with MAC address added to indentify the source where will be delivery.
+F Physical layer are frames are converted into electrical signal, sent by ethernet cable or wireless.
+ 
+
+

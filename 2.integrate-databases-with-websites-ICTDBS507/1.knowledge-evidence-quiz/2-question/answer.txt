@@ -1,0 +1,30 @@
+What are the industry standard languages used in database programming? Focus on web technology.
+
+Submission:
+
+<Language Name>
+
+<Use of language>
+
+
+
+1. SQL
+
+SQL is the go-to language for chatting with databases and keeping things organized. 
+With SQL, you can pull up specific info, update records, add new entries, or delete data 
+you don’t need anymore.
+
+It’s the standard tool for working with relational databases like MySQL or PostgreSQL and 
+is key to managing the data that powers most websites and apps out there.
+
+2.	NoSQL
+NoSQL is the more flexible version of a database, storing info in formats like documents, 
+key-value pairs, or graphs instead of traditional tables. They’re great for handling big 
+chunks of unstructured data and offer scalability, making them perfect for modern web apps 
+that need a more relaxed approach to data management.
+
+3.	PL/SQL and T-SQL
+PL/SQL and T-SQL are SQL extensions used with specific databases—PL/SQL for Oracle and T-SQL 
+for Microsoft SQL Server. They add procedural features like loops and conditions, allowing for 
+more complex operations within the database, like writing stored procedures and triggers that 
+automate tasks and boost performance.

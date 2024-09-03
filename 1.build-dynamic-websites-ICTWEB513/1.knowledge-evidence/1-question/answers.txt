@@ -1,0 +1,11 @@
+1. 
+
+User centred design
+ The name already resume the meaning , basic the main propose is create application on focus  the mind of final user. Include necessities and fits that will be better to the public. There some techniques to search what the user looks, think and want. therefore envolve those factos it's possible to find a success-case.
+
+Accessibility 
+
+It's similarly on the  user-centred design, but the focus here is sure that all users has the same experience, focusing on habilites and deficiencies that will turn the design to everyone in one same experience. Example, visual and audiovisual impairments, color blindness.
+
+
+2. 

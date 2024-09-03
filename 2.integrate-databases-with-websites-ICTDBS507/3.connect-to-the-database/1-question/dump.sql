@@ -1,0 +1,12 @@
+-- STEP 1
+CREATE DATABASE IF NOT EXISTS ictdbs507_31;
+
+-- STEP 2
+USE ictdbs507_31;
+
+-- STEP 3
+CREATE TABLE onepiece (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(200),
+    crew VARCHAR(200)
+);

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="author" content="Matheus Maciel Melchiades" />
+    <title>Guessing Game</title>
+  </head>
+  <body>
+    <h1>Guessing Game</h1>
+    <p>Guess a number between 0 and 100:</p>
+
+    <input type="number" id="guessInput" />
+    <button id="guessButton">Guess</button>
+
+    <p id="message"></p>
+
+    <p id="attempts"></p>
+
+    <script>
+      const min = 0;
+      const limit = 100;
+      const randomNumber = Math.floor(Math.random() * 101);
+
+      let attempts = [];
+
+      document
+        .getElementById("guessButton")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+
+          let message = "";
+          const messageEle = document.getElementById("message");
+          const attemptsEle = document.getElementById("attempts");
+          const guessInputEle = document.getElementById("guessInput");
+          const value = parseInt(guessInputEle.value);
+
+          if (value < min || value > limit) {
+            message = `Please enter a number between ${min} and ${limit}.`;
+          } else {
+            attempts.push(value);
+
+            if (value === randomNumber)
+              message = `Congratulations! You guessed right with ${attempts.length} attempts.`;
+            if (value < randomNumber) message = "Too low. Try again.";
+            if (value > randomNumber) message = "Too high. Try again.";
+          }
+
+          messageEle.textContent = message;
+
+          guessInputEle.value = "";
+
+          if (attempts.length)
+            attemptsEle.textContent = `Your Attempts: ${attempts.join(", ")}`;
+        });
+    </script>
+  </body>
+</html>
